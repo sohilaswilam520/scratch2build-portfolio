@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#about" class="logo">DevPortfolio</a>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button type="button" id="theme-toggle" class="btn-theme">Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="hero-section">
+      <h1>Hi, I'm a Frontend Developer</h1>
+      <p>Building clean, responsive, and interactive web applications using HTML, CSS, and Vanilla JavaScript.</p>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-top">
+        <h2>My Projects</h2>
+        <div class="filter-buttons" id="filter-buttons">
+          <button type="button" class="filter-btn active" data-category="all">All</button>
+          <button type="button" class="filter-btn" data-category="html-css">HTML & CSS</button>
+          <button type="button" class="filter-btn" data-category="javascript">JavaScript</button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" data-category="html-css">
+          <span class="tag">HTML & CSS</span>
+          <h3>Responsive Personal Dashboard</h3>
+          <p>A multi-column admin layout built with CSS Grid, Flexbox, and custom variables.</p>
+        </article>
+
+        <article class="project-card" data-category="javascript">
+          <span class="tag">JavaScript</span>
+          <h3>FCAI Event Filter App</h3>
+          <p>Interactive event manager featuring live search, category filtering, and DOM deletion.</p>
+        </article>
+
+        <article class="project-card" data-category="javascript">
+          <span class="tag">JavaScript</span>
+          <h3>Interactive Portfolio with BOM</h3>
+          <p>Personal portfolio with persistent theme and filter state stored in localStorage.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="sender-name">Your Name</label>
+          <input type="text" id="sender-name" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="sender-email">Email Address</label>
+          <input type="email" id="sender-email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="sender-message">Message</label>
+          <textarea id="sender-message" rows="4" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+      <p id="form-feedback" class="feedback-msg" hidden></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 DevPortfolio. Built with Vanilla HTML, CSS & JS.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
